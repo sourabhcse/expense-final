@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <title>Expense Tracker</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(223, 181, 240);
+        }
+        .submission-form{
+            max-width:500px;
+            margin:2rem auto;
+            border:2px solid #2a72dd;
+            padding:2rem;
+        }
+        label{
+            display: block;
+            text-transform: uppercase;
+        }
+        input{
+            width:100%;
+        }
+        button{
+            width:40%;
+            text-transform: uppercase;
+            
+        
+        }
+        button:hover{
+            color: #E74C3C;
+        }
+        #rzp-button{
+            color:green;
+        }
+        #listofExpenses{
+            display:block;
+            border:2px solid;
+            text-align: center;
+            
+        }
+        #leaderboard{
+            display:block;
+            border:2px solid;
+            text-align: center;
+            color:blue
+        }
+        li{
+            color:rgb(7, 7, 7);
+            text-transform:uppercase;
+            display:block;
+        }
+        #downloadexpense{
+            text-align: center;
+            width: fit-content;
+            
+        }
+        #pagination button{
+            width:2%;
+            
+        }
+        #paginationleader button{
+            width:2%
+        }
+    </style>
+</head>
+<body>
+    <h2>EXPENSE TRACKER APP</h2>
+    <form class="submission-form" onsubmit="addNewExpense(event)">
+        <label for="expenseamount">Choose expenseamount:</label>
+        <input type="number" name="expenseamount" required >
+        <label for="description">Choose description:</label>
+        <input type="text" name="description" required >
+        <label for="category">Choose a category</label>
+        <select id="category" name="category">
+            <option value="fuel">FUEL</option>
+            <option value="food">FOOD</option>
+            <option value="electricity">ELECTRICITY</option>
+            <option value="shooping">SHOOPING</option>
+            <option value="gym">GYM</option>
+            <option value="hotel">HOTEL</option>
+            <option value="dance">DANCE</option>
+            <option value="servicing">SERVICING</option>
+            <option value="ebill">EBILL</option>
+            <option value="credit">CREDIT CARD BILL</option>
+            <option value="water">WATER BILL</option>
+            <option value="onlineshooping">ONLINE SHOOPING</option>
+            
+
+        </select>
+        <button>Add Expense</button>
+
+    </form>
+   
+    <ul id="listofExpenses"></ul>
+    <div id="pagination"></div>
+    <h5 style="color:blue">Download File >>>>Buy premium</h5>
+    <button onclick="download()" id="downloadexpense" class="mydownload">Download File</button>
+    <div id="message"></div>
+    <div id="leaderboard"></div>
+    <div id="paginationleader"></div>
+    <button id="rzp-button">Buy Premium</button>
+   
+ 
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="./index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <title>Document</title>
+    <style>
+         body{
+            text-align: center;
+            background-color: rgb(241, 215, 241);
+        }
+        .submission-form{
+            max-width:500px;
+            margin:2rem auto;
+            border:2px solid #9c88e7;
+            padding:2rem;
+        }
+        label{
+            display: block;
+            text-transform: uppercase;
+        }
+        input{
+            width:100%;
+        }
+        button{
+            width:40%;
+        
+        }
+        button:hover{
+            color: #E74C3C;
+        }
+    </style>
+</head>
+<body>
+    <h2>LOGIN</h2>
+    <form class="submission-form" onsubmit="login(event)">
+        <label for="email">Enter your email:</label>
+        <input type="email" name="email" placeholder="enter your email"required />
+        <input type="password" name="password" placeholder="enter your password" required />
+        <button>Login</button>
+
+    </form>
+    <button onclick="forgotpassword()"> Forgot password</button><br><br><br>
+  
+    <a href="../signup/signup.html" id="id1">new user sign up now</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>

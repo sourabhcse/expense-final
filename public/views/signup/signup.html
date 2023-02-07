@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(224, 183, 212);
+            /*background:url('./img2.jpeg');*/
+            background-size: cover;
+        }
+        .submission-form{
+            max-width:500px;
+            margin:2rem auto;
+            border:2px solid #1e4763;
+            padding:2rem;
+        }
+        label{
+            display: block;
+            text-transform: uppercase;
+        }
+        input{
+            width:100%;
+            color:rgb(128, 0, 117);
+        }
+        button{
+            width:40%;
+        
+        }
+        button:hover{
+            color: #E74C3C;
+        }
+        
+    </style>
+
+   
+</head>
+<body>
+    <h2>NEW USER</h2>
+    <form class="submission-form" onsubmit="signup(event)">
+        <label for="name">Enter name:</label>
+        <input type="text" name="name" required /><br>
+        <label for="email">Enter email:</label>
+        <input type="email" name="email"  /><br>
+        <label for="password">Enter password:</label>
+        <input type="password" name="password" required /><br>
+        <button>Signup</button>
+    </form>
+    <a href="../login/login.html" id="link">Existing User - Login</a>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
