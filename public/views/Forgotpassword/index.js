@@ -9,8 +9,10 @@ async function forgotpassword(e) {
     console.log(userDetails)
     axios.post('/password/forgotpassword',userDetails).then(response => {
         if(response.status === 202){
+            console.log(response)
             document.body.innerHTML += '<div style="color:red;">Mail Successfuly sent <div>'
         } else {
+            
             throw new Error('Something went wrong!!!')
         }
         console.log(response)
