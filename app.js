@@ -8,7 +8,7 @@ var cors=require('cors')
 const sequelize = require('./util/database');
 
 const app = express();
-// app.use(helmet())
+
 app.use(cors())
 app.use(bodyParser.json());
 
@@ -57,6 +57,7 @@ sequelize
 .then(result => {
    console.log(result)
    app.listen(4000)
+   //app.listen(5000)
   })
   .catch((err)=>{
     console.log(err)
